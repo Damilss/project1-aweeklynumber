@@ -6,3 +6,11 @@
 
 **Group Members:** Emilio Scott, Jude Roscoe Parzybok
 
+## Objective: 
+
+The Objective of this project is to create a delete event function within our weekly event project.
+
+## Repository Stucture: 
+docs - Documentation for all future updates
+
+
