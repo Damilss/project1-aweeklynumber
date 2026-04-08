@@ -29,23 +29,40 @@ import java.util.ArrayList;
 import java.util.Scanner; 
 
 
-public class DeleteEvent {
-    ArrayList < ArrayList< String > > weeklyCalendar = new ArrayList<>();
+public class Main {
+    ArrayList<ArrayList<String>> weeklyCalendar = new ArrayList<>();
+
+    ArrayList<String> Monday = new ArrayList<>(); 
+    ArrayList<String> Tuesday = new ArrayList<>();
+    ArrayList<String> Wednesday = new ArrayList<>();
+    ArrayList<String> Thursday = new ArrayList<>();
+    ArrayList<String> Friday = new ArrayList<>();
+    ArrayList<String> Saturday = new ArrayList<>();
+    ArrayList<String> Sunday = new ArrayList<>();
+    void main(String[] args){
+        weeklyCalendar.add(Monday);
+        weeklyCalendar.add(Tuesday);
+        weeklyCalendar.add(Wednesday);
+        weeklyCalendar.add(Thursday);
+        weeklyCalendar.add(Friday);
+        weeklyCalendar.add(Saturday);
+        weeklyCalendar.add(Sunday);
+    }
+
+
+    
     int weekDayIdx = -1; 
-    public void main() { 
+    static void deleteEvent() { 
         System.out.println(
             """
             Great! Which day has the event you want to remove? 
             You can type Monday, Tuesday, etc.
             """
-        );
+        ); 
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter day of week: ");
-        while (weekDayIdx.equals(-1);) {
-            String weekDay = input.nextLine();
-        }        
+        System.out.print("Enter day of week: ");    
 
-        switch (weekDay) {
+        switch () {
             case "Monday":
             case "monday":
                 System.out.println("Monday selected!");
