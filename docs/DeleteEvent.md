@@ -28,12 +28,18 @@ for (int i = 0; i < 7; i++){
 
 ## Implementation: 
 
-- user calls to deleteEvent through specific function from UI? 
-- IO. Input Name? Date? Location? Go based off of AddEvent 
-- List possible functions within the calendar to have a list to go off of. 
+- user calls to deleteEvent through specific function from UI
+- program begins from the printed line: 
+`"Great! Which day has the event you want to remove..."` 
+- Event is filtered (through switch case) through day of Week as program specifies for DeleteEvent in program 1 instructions
+- default case returns back to prompt!
+- List all events within the calendar day to have a
 
 
-## Testing for Edge Cases: 
-
+## Testing for Cases: 
 - Possible invalid input from user? 
-- user might want to return to original UI
+- user might want to return to original UI?
+- no events within specified date, return to day chooser or return back to original UI? 
+
+
+
