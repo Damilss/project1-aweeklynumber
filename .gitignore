@@ -23,6 +23,8 @@
 hs_err_pid*
 replay_pid*
 
+./src/LCKMain.java~
+
 #Mac Stuff 
 .DS_Store
 

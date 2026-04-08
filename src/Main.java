@@ -49,53 +49,31 @@ public class Main {
         weeklyCalendar.add(Sunday);
     }
 
-    static void deleteEvent(ArrayList<ArrayList<String> Calendar, String event) {
-        int weekDayIdx = -1;
 
-        while (weekDayIdx == -1) {
-            switch (event.toLowerCase()) {
-                case "monday":
-                    System.out.println("Monday selected!");
-                    int weekDayIdx = 0;
-                    break;
-                case "tuesday":
-                    System.err.println("Tuesday Selected");
-                    int weekDayIdx = 1;
-                    break;
-                case "wednesday":
-                    System.err.println("Wednesday Selected");
-                    int weekDayIdx = 2;
-                    break;
-                case "thursday":
-                    System.err.println("Thursday Selected");
-                    int weekDayIdx = 3;
-                    break;
-                case "friday":
-                    System.err.println("Friday Selected");
-                    int weekDayIdx = 4;
-                    break;
-                case "saturday":
-                    System.err.println("Saturday Selected");
-                    int weekDayIdx = 5;
-                    break;
-                case "sunday":
-                    System.err.println("Sunday Selected");
-                    int weekDayIdx = 6;
-                    break;
-            }
+    
+    int weekDayIdx = -1; 
+    static void deleteEvent() { 
+        System.out.println(
+            """
+            Great! Which day has the event you want to remove? 
+            You can type Monday, Tuesday, etc.
+            """
+        ); 
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter day of week: ");    
 
-            int eventIdx = -1;
-            while (eventIdx == -1) {
-                for (int i = 0; i < weeklyCalendar[weekDayIdx].length; i++) {
-                    if (weeklyCalendar[weekDayIdx] == event) {
-                        eventIdx = i;
-                    }
-                }
-                System.out.println("Event not found.");
-            }
+        switch () {
+            case "Monday":
+            case "monday":
+                System.out.println("Monday selected!");
+                int weekDayIdx = 0; 
+                break;
+            case "Tuesday":
+            case "tuesday":
+                System.err.println("Tuesday Selected");
+                
 
+                
         }
-
-        weeklyCalendar.remove(weekDayIdx, eventIdx);
     }
 }

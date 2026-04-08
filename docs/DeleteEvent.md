@@ -30,16 +30,23 @@ for (int i = 0; i < 7; i++){
 
 - user calls to deleteEvent through specific function from UI
 - program begins from the printed line: 
-`"Great! Which day has the event you want to remove..."` 
+    `"Great! Which day has the event you want to remove..."` 
 - Event is filtered (through switch case) through day of Week as program specifies for DeleteEvent in program 1 instructions
 - default case returns back to prompt!
-- List all events within the calendar day to have a
+- List all events within the calendar day to have show user what day they might want to remove. 
+- If events are empty from that day return back to the choosing of the day and output: 
+    `No events availible` 
 
 
 ## Testing for Cases: 
 - Possible invalid input from user? 
 - user might want to return to original UI?
 - no events within specified date, return to day chooser or return back to original UI? 
+
+## ./sandbox/ 
+
+`./sandbox/` is sample code from professor. What rest of the project is going to look like. Other teams working on other projects that we'll all implement later. 
+
 
 
 
