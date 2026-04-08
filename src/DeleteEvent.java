@@ -24,12 +24,39 @@ for (int i = 0; i < 7; i++){
 ]
 */
 
-import java.util.ArrayList;
+//standard java library
+import java.util.ArrayList; 
+import java.util.Scanner; 
+
 
 public class DeleteEvent {
     ArrayList < ArrayList< String > > weeklyCalendar = new ArrayList<>();
-    String[][] calendar;
+    int weekDayIdx = -1; 
     public void main() { 
-        
+        System.out.println(
+            """
+            Great! Which day has the event you want to remove? 
+            You can type Monday, Tuesday, etc.
+            """
+        );
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter day of week: ");
+        while (weekDayIdx.equals(-1);) {
+            String weekDay = input.nextLine();
+        }        
+
+        switch (weekDay) {
+            case "Monday":
+            case "monday":
+                System.out.println("Monday selected!");
+                int weekDayIdx = 0; 
+                break;
+            case "Tuesday":
+            case "tuesday":
+                System.err.println("Tuesday Selected");
+                
+
+                
+        }
     }
 }
