@@ -14,7 +14,7 @@ for (int i = 0; i < 7; i++){
 //visual aid for weeklyCalendar 
 /*
 [
-["Math class at 10:00am, Gym at 2:00pm"],
+["Math class at 10:00am "Gym at 2:00pm"],
 [],
 ["Dance class at 9:00am","CS class at 11:00am"],
 ["Club meeting at 5:00pm"],
@@ -61,6 +61,7 @@ public class Main {
     }
 
     static void addEvent(){}
+
     /**
      * deletes an event from the weekly calendar based on matching the first word of the event string.
      * 
@@ -102,11 +103,9 @@ public class Main {
                             
                         }
                         
-                        //since all events are in index 0 within the day, we pull index 0
-                        String[] eventsInDay = extractedEventString.split(", ");
                         ArrayList<String> newEventsInDay = new ArrayList <>();
 
-                        for (String event: eventsInDay){
+                        for (String event: dayOfWeek){
                             /* docs: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
                             *Returns the index of the first (for atIndex) and last (for atLastIndex) occurrence of the specified substring
                             */
