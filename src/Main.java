@@ -55,8 +55,13 @@ public class Main {
 
         //---------------- CREATING TEST CALENDAR ------------------------/
 
-        
-        weeklyCalendar.get(0).add("Go to the beach at 10:00am");
+        //Same calendar as the one in the visual aid. 
+        weeklyCalendar.get(6).add("Go to the beach at 10:00am");
+        weeklyCalendar.get(0).add("Math class at 10:00am");
+        weeklyCalendar.get(0).add("Gym at 2:00pm");
+        weeklyCalendar.get(2).add("Dnace class at 9:00am");
+        weeklyCalendar.get(2).add("CS class at 11:00am");
+        weeklyCalendar.get(3).add("Club meeting at 5:00pm");
 
 
         printCalendar(weeklyCalendar);
