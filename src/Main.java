@@ -104,22 +104,24 @@ public class Main {
                         
                         //since all events are in index 0 within the day, we pull index 0
                         String[] eventsInDay = extractedEventString.split(", ");
+                        ArrayList<String> newEventsInDay = new ArrayList <>();
 
                         for (String event: eventsInDay){
                             /* docs: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
                             *Returns the index of the first (for atIndex) and last (for atLastIndex) occurrence of the specified substring
                             */
-                            int split = event.lastIndexOf(" at ");
-                            String eventName = event.substring(0, split);
-                            String eventRest = event.subtstring(split);
+                            int splitAt = event.lastIndexOf(" at ");
+                            String eventName = event.substring(0, splitAt);
+                            String eventRest = event.substring(splitAt);
 
                             if (eventName.toLowerCase().equals(userInputEvent.toLowerCase())){
                                 removedFlag = true;
 
                             } else {
-                                //cONTINUE HERE
+                                newEventsInDay.add(eventName + eventRest);
+
                             }
-                        }  
+                        }
                     }
                 }
             }
