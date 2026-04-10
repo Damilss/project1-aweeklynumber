@@ -14,7 +14,7 @@ for (int i = 0; i < 7; i++){
 //visual aid for weeklyCalendar 
 /*
 [
-["Math class at 10:00am "Gym at 2:00pm"],
+["Math class at 10:00am, "Gym at 2:00pm"],
 [],
 ["Dance class at 9:00am","CS class at 11:00am"],
 ["Club meeting at 5:00pm"],
@@ -53,12 +53,11 @@ public class Main {
         weeklyCalendar.add(Saturday);   //idx: 5
         weeklyCalendar.add(Sunday);     //idx: 6
 
+        //---------------- CREATING TEST CALENDAR ------------------------/
+
         
-
-
-
-
         weeklyCalendar.get(0).add("Go to the beach at 10:00am");
+
 
         printCalendar(weeklyCalendar);
 
