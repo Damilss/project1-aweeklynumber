@@ -35,6 +35,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList< ArrayList<String> > weeklyCalendar = new ArrayList<>();
 
+        //create dayOfWeek
         ArrayList<String> Monday = new ArrayList<>();
         ArrayList<String> Tuesday = new ArrayList<>();
         ArrayList<String> Wednesday = new ArrayList<>();
@@ -43,13 +44,17 @@ public class Main {
         ArrayList<String> Saturday = new ArrayList<>();
         ArrayList<String> Sunday = new ArrayList<>();
 
-        weeklyCalendar.add(Monday);
-        weeklyCalendar.add(Tuesday);
-        weeklyCalendar.add(Wednesday);
-        weeklyCalendar.add(Thursday);
-        weeklyCalendar.add(Friday);
-        weeklyCalendar.add(Saturday);
-        weeklyCalendar.add(Sunday);
+        //add to weeklyCalendar
+        weeklyCalendar.add(Monday);     //idx: 0
+        weeklyCalendar.add(Tuesday);    //idx: 1
+        weeklyCalendar.add(Wednesday);  //idx: 2
+        weeklyCalendar.add(Thursday);   //idx: 3
+        weeklyCalendar.add(Friday);     //idx: 4
+        weeklyCalendar.add(Saturday);   //idx: 5
+        weeklyCalendar.add(Sunday);     //idx: 6
+
+        
+
 
 
 
@@ -80,14 +85,14 @@ public class Main {
      *   deleteEvent(myCalendar, "Math")  // this wiill delete "Math class at 10:00am" event
      * oh and time complexity is O(n^n))
      */
-    static void deleteEvent(ArrayList<ArrayList<String>> weeklyCalendar, String userInputEvent){
-        if (weeklyCalendar == null){
+    static void deleteEvent(ArrayList<ArrayList<String>> calendar, String userInputEvent){
+        if (calendar == null){
             System.err.println("no calendar, please check your calendar.");
 
         } else {
             boolean removedFlag = false; 
 
-            for (ArrayList<String> dayOfWeek : weeklyCalendar ) {
+            for (ArrayList<String> dayOfWeek : calendar ) {
                 if (dayOfWeek == null){
                     System.err.println("dayOfweek does not exist, please check your calender.");
 
@@ -127,7 +132,7 @@ public class Main {
 
             if (removedFlag){
                 System.out.println("Event Deleted, here is your new calendar!");
-                printCalendar(weeklyCalendar);
+                printCalendar(calendar);
             } else { 
                 System.err.println("No events found! please check your input and try again.");
             }
