@@ -59,7 +59,7 @@ public class Main {
         weeklyCalendar.get(6).add("Go to the beach at 10:00am");
         weeklyCalendar.get(0).add("Math class at 10:00am");
         weeklyCalendar.get(0).add("Gym at 2:00pm");
-        weeklyCalendar.get(2).add("Dnace class at 9:00am");
+        weeklyCalendar.get(2).add("Dance class at 9:00am");
         weeklyCalendar.get(2).add("CS class at 11:00am");
         weeklyCalendar.get(3).add("Club meeting at 5:00pm");
 
@@ -101,36 +101,26 @@ public class Main {
                     System.err.println("dayOfweek does not exist, please check your calender.");
 
                 } else {
-                    int weekSize = dayOfWeek.size();
+                    ArrayList<String> newEventsInDay = new ArrayList<>();
 
-                    for (int i = 0; i < weekSize; i++){
-                        String extractedEventString = dayOfWeek.get(0);
-                        //can be "" or null
-                        if (extractedEventString.equals("") || extractedEventString == null){
-                            //skips over the rest of loop and continues iteration
-                            continue;
-                            
-                        }
-                        
-                        ArrayList<String> newEventsInDay = new ArrayList <>();
+                    for (String event : dayOfWeek) {
+                        /* docs: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
+                         *Returns the index of the first (for atIndex) and last (for atLastIndex) occurrence of the specified substring
+                         */
+                        int splitAt = event.lastIndexOf(" at ");
+                        String eventName = event.substring(0, splitAt);
+                        String eventRest = event.substring(splitAt);
 
-                        for (String event: dayOfWeek){
-                            /* docs: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
-                            *Returns the index of the first (for atIndex) and last (for atLastIndex) occurrence of the specified substring
-                            */
-                            int splitAt = event.lastIndexOf(" at ");
-                            String eventName = event.substring(0, splitAt);
-                            String eventRest = event.substring(splitAt);
+                        if (eventName.toLowerCase().equals(userInputEvent.toLowerCase())) {
+                            removedFlag = true;
 
-                            if (eventName.toLowerCase().equals(userInputEvent.toLowerCase())){
-                                removedFlag = true;
+                        } else {
+                            newEventsInDay.add(eventName + eventRest);
 
-                            } else {
-                                newEventsInDay.add(eventName + eventRest);
-
-                            }
                         }
                     }
+                    dayOfWeek.clear();
+                    dayOfWeek.addAll(newEventsInDay);
                 }
             }
 
@@ -151,11 +141,14 @@ public class Main {
     static void printDay(){}
 
     static void printCalendar(ArrayList<ArrayList<String>> calendar) {
+        String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
         System.out.println("Great! Here is your current calendar for this week.\n");
 
-        for (ArrayList<String> day : calendar) {
-          //  System.out.println(day.getFirst() + ":"); // Prints day
+        for (int i = 0; i < calendar.size(); i++) {
+            System.out.println(days[i] + ":");
 
+            ArrayList<String> day = calendar.get(i);
 
             if (day.size() == 0) {
                 System.out.println("\tNo events");
